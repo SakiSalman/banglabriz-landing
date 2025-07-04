@@ -79,37 +79,37 @@ const Header = () => {
           <div className="md:hidden py-4 border-t">
             <div className="flex flex-col space-y-4">
               <a
-                href="#"
+                href="/"
                 className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
               >
                 HOME
               </a>
               <a
-                href="#"
+                href="/about"
                 className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
               >
                 ABOUT
               </a>
               <a
-                href="#"
+                href="/services"
                 className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
               >
                 SERVICES
               </a>
               <a
-                href="#"
+                href="/gallery"
                 className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
               >
                 GALLERY
               </a>
               <a
-                href="#"
+                href="/apply"
                 className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
               >
                 APPLY
               </a>
               <a
-                href="#"
+                href="/recruit"
                 className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
               >
                 RECENT
