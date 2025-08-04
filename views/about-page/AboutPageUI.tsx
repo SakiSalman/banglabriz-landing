@@ -101,7 +101,7 @@ const AboutPageUI = () => {
       <div className="min-h-screen bg-gray-50">
   
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-[var(--primary-color)] to-[var(--primary-color-light)] text-white py-20">
+        <section className="bg-gradient-to-r from-primary to-[var(--primary-color-light)] text-white py-20">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="text-center">
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
@@ -111,10 +111,10 @@ const AboutPageUI = () => {
                 Our systematic approach to career development and education consultancy ensures your success every step of the way.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-[var(--secondary-color)] hover:bg-[var(--secondary-color-light)] text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200">
+                <button className="bg-secondary hover:bg-secondary-light text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200">
                   Start Your Journey
                 </button>
-                <button className="border-2 border-white text-white hover:bg-white hover:text-[var(--primary-color)] px-8 py-4 rounded-lg font-medium transition-all duration-200">
+                <button className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-lg font-medium transition-all duration-200">
                   Learn More
                 </button>
               </div>
@@ -134,7 +134,7 @@ const AboutPageUI = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="stat-card">
-                  <div className="text-4xl md:text-5xl font-bold text-[var(--primary-color)] mb-2">
+                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
                     {stat.number}{stat.suffix}
                   </div>
                   <div className="text-sm md:text-base text-[var(--body-color)]">
@@ -161,7 +161,7 @@ const AboutPageUI = () => {
                 <div 
                   key={index} 
                   className={`service-card cursor-pointer transition-all duration-300 ${
-                    activeStep === index ? 'ring-2 ring-[var(--secondary-color)]' : ''
+                    activeStep === index ? 'ring-2 ring-secondary' : ''
                   }`}
                   onClick={() => setActiveStep(index)}
                 >
@@ -173,7 +173,7 @@ const AboutPageUI = () => {
                       <ul className="space-y-2 mb-4">
                         {step.highlights.map((highlight, idx) => (
                           <li key={idx} className="flex items-center text-sm text-[var(--body-color)]">
-                            <CheckCircle className="w-4 h-4 text-[var(--quaternary-color)] mr-2" />
+                            <CheckCircle className="w-4 h-4 text-quaternary mr-2" />
                             {highlight}
                           </li>
                         ))}
@@ -218,14 +218,14 @@ const AboutPageUI = () => {
         </section>
   
         {/* Testimonial Section */}
-        <section className="py-20 bg-gradient-to-r from-[var(--primary-color)] to-[var(--primary-color-light)] text-white">
+        <section className="py-20 bg-gradient-to-r from-primary to-[var(--primary-color-light)] text-white">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="text-center">
               <blockquote className="text-2xl md:text-3xl font-light italic mb-8 max-w-4xl mx-auto">
                 "We specialize in connecting skilled workers with reputable companies, demonstrating our ability to adapt and respond to evolving needs."
               </blockquote>
               <div className="flex justify-center">
-                <button className="bg-[var(--secondary-color)] hover:bg-[var(--secondary-color-light)] text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 flex items-center">
+                <button className="bg-secondary hover:bg-secondary-light text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 flex items-center">
                   Start Your Journey
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </button>

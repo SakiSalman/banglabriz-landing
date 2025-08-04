@@ -7,7 +7,7 @@
   --secondary-color-light: #f94766;
   --body-color: #000000;
   --quaternary-color: #1c8806;
-  --gray-color: #cac2c2;
+  --gray-color: #fffde9;
 }
 
 body {
@@ -35,11 +35,11 @@ h6 {
 
 @layer components {
   .btn-primary {
-    @apply bg-[var(--secondary-color)] hover:bg-[var(--secondary-color-light)] text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200;
+    @apply bg-secondary hover:bg-secondary-light text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200;
   }
 
   .btn-secondary {
-    @apply border-2 border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-white px-6 py-3 rounded-lg font-medium transition-all duration-200;
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-medium transition-all duration-200;
   }
 
   .phase-tag {
@@ -47,7 +47,7 @@ h6 {
   }
 
   .step-number {
-    @apply w-12 h-12 bg-[var(--secondary-color)] text-white rounded-full flex items-center justify-center font-bold text-lg;
+    @apply w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-lg;
   }
 
   .service-card {
@@ -105,4 +105,16 @@ input[type='time']::-webkit-clear-button {
     padding: 0 10px;
     margin: auto;
   }
+}
+@keyframes slideOverlay {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-overlay-slide {
+  animation: slideOverlay 1s ease-out forwards;
 }

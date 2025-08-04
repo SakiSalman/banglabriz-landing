@@ -11,7 +11,7 @@ const Header = () => {
       <div className="md:max-w-6xl mx-auto px-4 md:px-8 bg-[#ffffffe0] rounded-full ring ring-blue-900 shadow-lg">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href={'/'} className="text-2xl font-bold text-[var(--primary-color)]">
+            <Link href={'/'} className="text-2xl font-bold text-primary">
               <Image
                 alt="logo"
                 src={'/images/logo-full.png'}
@@ -26,51 +26,50 @@ const Header = () => {
           <div className="hidden md:flex space-x-8">
             <a
               href="#"
-              className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
+              className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
             >
               HOME
             </a>
             <a
               href="/about"
-              className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
+              className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
             >
               ABOUT
             </a>
             <a
               href="/services"
-              className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
+              className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
             >
               SERVICES
             </a>
             <a
               href="/gallery"
-              className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
+              className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
             >
               GALLERY
             </a>
             <a
               href="/apply"
-              className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
+              className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
             >
               APPLY
             </a>
             <a
               href="/blog"
-              className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
+              className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
             >
               Blogs
             </a>
             <a
               href="/recruit"
-              className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
+              className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
             >
               RECRUIT
             </a>
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Phone className="w-5 h-5 text-[var(--secondary-color)]" />
-            <button className="bg-[var(--secondary-color)] hover:bg-[var(--secondary-color-light)] text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">
+            <button className="bg-secondary hover:bg-secondary-light text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">
               Get Quote
             </button>
           </div>
@@ -87,41 +86,41 @@ const Header = () => {
             <div className="flex flex-col space-y-4">
               <a
                 href="/"
-                className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
+                className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
               >
                 HOME
               </a>
               <a
                 href="/about"
-                className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
+                className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
               >
                 ABOUT
               </a>
               <a
                 href="/services"
-                className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
+                className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
               >
                 SERVICES
               </a>
               <a
                 href="/gallery"
-                className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
+                className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
               >
                 GALLERY
               </a>
               <a
                 href="/apply"
-                className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
+                className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
               >
                 APPLY
               </a>
               <a
                 href="/recruit"
-                className="text-[var(--body-color)] hover:text-[var(--primary-color)] transition-colors font-medium"
+                className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
               >
                 RECENT
               </a>
-              <button className="bg-[var(--secondary-color)] hover:bg-[var(--secondary-color-light)] text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200 w-fit">
+              <button className="bg-secondary hover:bg-secondary-light text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200 w-fit">
                 Get Quote
               </button>
             </div>

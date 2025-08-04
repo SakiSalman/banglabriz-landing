@@ -33,7 +33,7 @@ const ServicesPageUI = () => {
       title: 'University Application Support',
       description:
         'Comprehensive guidance for university and college admissions, course selection, and application processes.',
-      color: 'text-[var(--secondary-color)]',
+      color: 'text-secondary',
     },
     {
       icon: FileText,
@@ -47,7 +47,7 @@ const ServicesPageUI = () => {
       title: 'Academic Counseling',
       description:
         'Personalized academic guidance to help you choose the right educational path for your career goals.',
-      color: 'text-[var(--quaternary-color)]',
+      color: 'text-quaternary',
     },
     {
       icon: Globe,
@@ -78,14 +78,14 @@ const ServicesPageUI = () => {
       title: 'Engineering & Technical',
       description:
         'Technical positions for qualified engineers and technicians in various European markets.',
-      color: 'text-[var(--quaternary-color)]',
+      color: 'text-quaternary',
     },
     {
       icon: Wrench,
       title: 'Maintenance & Operations',
       description:
         'Maintenance roles, equipment operation, and facility management positions with competitive salaries.',
-      color: 'text-[var(--secondary-color)]',
+      color: 'text-secondary',
     },
     {
       icon: Briefcase,
@@ -109,7 +109,7 @@ const ServicesPageUI = () => {
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-[var(--primary-color)] mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
               Explore Our Services
             </h1>
             <p className="text-lg text-[var(--body-color)] max-w-4xl mx-auto leading-relaxed">
@@ -130,7 +130,7 @@ const ServicesPageUI = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[var(--secondary-color-light)] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary-light mb-4">
               🎓 Student Services
             </h2>
             <p className="text-lg text-[var(--body-color)] max-w-3xl mx-auto">
@@ -148,13 +148,13 @@ const ServicesPageUI = () => {
                 <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className={`w-8 h-8 ${service.color}`} />
                 </div>
-                <h3 className="text-xl font-bold text-[var(--primary-color)] mb-4">
+                <h3 className="text-xl font-bold text-primary mb-4">
                   {service.title}
                 </h3>
                 <p className="text-[var(--body-color)] leading-relaxed mb-6">
                   {service.description}
                 </p>
-                <button className="w-full bg-[var(--secondary-color)] hover:bg-[var(--secondary-color-light)] text-white py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">
+                <button className="w-full bg-secondary hover:bg-secondary-light text-white py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">
                   APPLY
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
@@ -186,13 +186,13 @@ const ServicesPageUI = () => {
                 <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className={`w-8 h-8 ${service.color}`} />
                 </div>
-                <h3 className="text-xl font-bold text-[var(--primary-color)] mb-4">
+                <h3 className="text-xl font-bold text-primary mb-4">
                   {service.title}
                 </h3>
                 <p className="text-[var(--body-color)] leading-relaxed mb-6">
                   {service.description}
                 </p>
-                <button className="w-full bg-[var(--secondary-color)] hover:bg-[var(--secondary-color-light)] text-white py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">
+                <button className="w-full bg-secondary hover:bg-secondary-light text-white py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">
                   APPLY
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
@@ -203,7 +203,7 @@ const ServicesPageUI = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[var(--quaternary-color)]">
+      <section className="py-20 bg-quaternary">
         <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Start Your Journey?
@@ -213,10 +213,10 @@ const ServicesPageUI = () => {
             matches your skills and aspirations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-[var(--secondary-color)] hover:bg-[var(--secondary-color-light)] text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200">
+            <button className="bg-secondary hover:bg-secondary-light text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200">
               Apply Now
             </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-[var(--quaternary-color)] px-8 py-4 rounded-lg font-medium transition-all duration-200">
+            <button className="border-2 border-white text-white hover:bg-white hover:text-quaternary px-8 py-4 rounded-lg font-medium transition-all duration-200">
               Schedule Consultation
             </button>
           </div>
