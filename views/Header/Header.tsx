@@ -1,17 +1,24 @@
 'use client';
 import { Menu, Phone, X } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
+    <nav className="fixed w-full top-3 left-0 right-0 z-50">
+      <div className="md:max-w-6xl mx-auto px-4 md:px-8 bg-[#ffffffe0] rounded-full ring ring-blue-900 shadow-lg">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href={'/'} className="text-2xl font-bold text-[var(--primary-color)]">
-              BanglaBriz
+              <Image
+                alt="logo"
+                src={'/images/logo-full.png'}
+                width={150}
+                height={40}
+                className="w-[130px] h-auto"
+              />
             </Link>
           </div>
 

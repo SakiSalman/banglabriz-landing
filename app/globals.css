@@ -5,7 +5,7 @@
   --primary-color-light: #045399;
   --secondary-color: #cb445b;
   --secondary-color-light: #f94766;
-  --body-color: #475467;
+  --body-color: #000000;
   --quaternary-color: #1c8806;
   --gray-color: #cac2c2;
 }
@@ -37,23 +37,23 @@ h6 {
   .btn-primary {
     @apply bg-[var(--secondary-color)] hover:bg-[var(--secondary-color-light)] text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200;
   }
-  
+
   .btn-secondary {
     @apply border-2 border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-white px-6 py-3 rounded-lg font-medium transition-all duration-200;
   }
-  
+
   .phase-tag {
     @apply bg-[var(--primary-color-light)] text-white px-3 py-1 rounded-full text-sm font-medium;
   }
-  
+
   .step-number {
     @apply w-12 h-12 bg-[var(--secondary-color)] text-white rounded-full flex items-center justify-center font-bold text-lg;
   }
-  
+
   .service-card {
     @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-100;
   }
-  
+
   .stat-card {
     @apply text-center p-6 bg-white rounded-lg shadow-md;
   }
@@ -91,4 +91,18 @@ input[type='time']::-webkit-calendar-picker-indicator {
 /* Optional: remove clear button (for input[type="search"]) */
 input[type='time']::-webkit-clear-button {
   display: none;
+}
+
+._container {
+  max-width: 1400px;
+  padding: 0 10px;
+  margin: auto;
+}
+
+@media (max-width: 650px) {
+  ._container {
+    width: 100%;
+    padding: 0 10px;
+    margin: auto;
+  }
 }

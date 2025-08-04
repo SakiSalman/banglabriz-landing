@@ -47,7 +47,7 @@ const RecruitPageUI = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Main Form */}
-      <main className="py-12 px-4 sm:px-6 lg:px-8">
+      <div className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             <div className="bg-gradient-to-r from-secondary to-secondary-light p-8 text-white">
