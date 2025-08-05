@@ -34,12 +34,25 @@ const Header = () => {
             >
               ABOUT
             </Link>
-            <Link
-              href="/services"
-              className="text-text hover:text-secondary transition-colors font-medium"
-            >
-              SERVICES
-            </Link>
+            <div className="relative group">
+              <button className="text-text hover:text-secondary transition-colors font-medium">
+                SERVICES
+              </button>
+              <div className="absolute left-0 mt-2 hidden group-hover:block bg-white border border-gray-100 rounded-lg shadow-lg w-48 z-50 top-2">
+                <Link
+                  href="/student-services"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Student Services
+                </Link>
+                <Link
+                  href="/worker-services"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >
+                  Worker Services
+                </Link>
+              </div>
+            </div>
             <Link
               href="/gallery"
               className="text-text hover:text-secondary transition-colors font-medium"
@@ -50,14 +63,14 @@ const Header = () => {
               href="/blog"
               className="text-text hover:text-secondary transition-colors font-medium"
             >
-              Blogs
+              BLOGS
             </Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            <button className="bg-secondary hover:bg-secondary-light text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">
+            <Link href={'/contact'} className="bg-secondary hover:bg-secondary-light text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">
               Get Quote
-            </button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -82,12 +95,25 @@ const Header = () => {
               >
                 ABOUT
               </Link>
-              <Link
-                href="/services"
-                className="text-text hover:text-secondary transition-colors font-medium"
-              >
-                SERVICES
-              </Link>
+              <details className="group">
+                <summary className="cursor-pointer text-text hover:text-secondary transition-colors font-medium list-none">
+                  SERVICES
+                </summary>
+                <div className="ml-4 mt-2 space-y-2">
+                  <Link
+                    href="/services/student"
+                    className="block text-sm text-gray-700 hover:text-secondary"
+                  >
+                    Student Services
+                  </Link>
+                  <Link
+                    href="/services/worker"
+                    className="block text-sm text-gray-700 hover:text-secondary"
+                  >
+                    Worker Services
+                  </Link>
+                </div>
+              </details>
               <Link
                 href="/gallery"
                 className="text-text hover:text-secondary transition-colors font-medium"

@@ -94,7 +94,7 @@ input[type='time']::-webkit-clear-button {
 }
 
 ._container {
-  max-width: 1400px;
+  max-width: 1400px !important;
   padding: 0 10px;
   margin: auto;
 }
