@@ -96,9 +96,9 @@ const BlogPageUI = () => {
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-navy to-primary text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-4">
-            BANGLABRIZ<span className="text-secondary">Blog</span>
+        <div className="_container text-center">
+          <h1 className="text-5xl font-bold mb-4 mt-10">
+            BANGLABRIZ <span className="text-secondary">BLOG</span>
           </h1>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
             Turning Visions Into Reality - Insights, stories, and updates from our journey
@@ -107,8 +107,8 @@ const BlogPageUI = () => {
       </section>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <section className="_container">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 py-5">
           {/* Blog Content - Left/Center */}
           <div className="lg:col-span-2">
             {/* Search and Filter */}
@@ -282,14 +282,14 @@ const BlogPageUI = () => {
             {/* Newsletter Signup */}
             <div className="bg-gradient-to-br from-primary to-navy text-white rounded-xl p-6">
               <h3 className="text-lg font-bold mb-2">Stay Updated</h3>
-              <p className="text-blue-100 text-sm mb-4">
+              <p className="!text-blue-100 text-sm mb-4">
                 Subscribe to our newsletter for the latest insights and updates.
               </p>
               <div className="space-y-3">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full px-4 py-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  className="w-full px-4 py-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50 bg-white"
                 />
                 <button className="w-full bg-secondary hover:bg-red-700 text-white py-2 rounded-lg font-medium transition-colors">
                   Subscribe
@@ -298,112 +298,7 @@ const BlogPageUI = () => {
             </div>
           </div>
         </div>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-xl font-bold text-primary mb-4">BANGLABRIZ</h3>
-              <p className="text-gray-300 text-sm mb-4">Turning Visions Into Reality</p>
-              <div className="flex space-x-3">
-                <a
-                  href="#"
-                  className="bg-primary hover:bg-blue-700 p-2 rounded-full transition-colors"
-                >
-                  <Facebook className="w-4 h-4" />
-                </a>
-                <a
-                  href="#"
-                  className="bg-blue-400 hover:bg-blue-500 p-2 rounded-full transition-colors"
-                >
-                  <Twitter className="w-4 h-4" />
-                </a>
-                <a
-                  href="#"
-                  className="bg-pink-500 hover:bg-pink-600 p-2 rounded-full transition-colors"
-                >
-                  <Instagram className="w-4 h-4" />
-                </a>
-                <a
-                  href="#"
-                  className="bg-blue-700 hover:bg-blue-800 p-2 rounded-full transition-colors"
-                >
-                  <Linkedin className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Useful Links</h4>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Careers
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    News & Articles
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Legal Notice
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Support</h4>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Help Center
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Contact Us
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    FAQ
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Privacy Policy
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Contact Information</h4>
-              <div className="text-sm text-gray-300 space-y-2">
-                <p>S.N. Meem City Tower, 4th Floor,</p>
-                <p>83/84 Hatkhazana Road, Mirpur-01,</p>
-                <p>4201 Chattogram, Bangladesh</p>
-                <p className="mt-3">📞 +88 01787 456 504</p>
-                <p>✉️ banglabriz@gmail.com</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>Copyright © BanglaBriz. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      </section>
     </div>
   );
 };

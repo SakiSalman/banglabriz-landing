@@ -17,7 +17,7 @@ const HeroBanner = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 text-center">
+      <div className="relative z-10 md:max-w-7xl mx-auto px-4 md:px-8 text-center">
         <div>
           <button className="bg-secondary-light/10 border border-secondary px-10 py-1 rounded-full text-white">
             BanglaBriz

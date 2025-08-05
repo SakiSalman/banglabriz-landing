@@ -1,4 +1,5 @@
 'use client';
+import { MotionDiv } from '@/utils/motion.utils';
 import { Menu, Phone, X } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,7 +9,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <nav className="fixed w-full top-3 left-0 right-0 z-50">
-      <div className="md:max-w-6xl mx-auto px-4 md:px-8 bg-[#ffffffe0] rounded-full ring ring-blue-900 shadow-lg">
+      <MotionDiv className="md:max-w-6xl mx-auto px-4 md:px-8 bg-[#ffffffe0] rounded-full ring ring-blue-900 shadow-lg">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href={'/'} className="text-2xl font-bold text-primary">
@@ -24,48 +25,33 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            <a
-              href="#"
-              className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
-            >
+            <Link href="#" className="text-text hover:text-secondary transition-colors font-medium">
               HOME
-            </a>
-            <a
+            </Link>
+            <Link
               href="/about"
-              className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
+              className="text-text hover:text-secondary transition-colors font-medium"
             >
               ABOUT
-            </a>
-            <a
+            </Link>
+            <Link
               href="/services"
-              className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
+              className="text-text hover:text-secondary transition-colors font-medium"
             >
               SERVICES
-            </a>
-            <a
+            </Link>
+            <Link
               href="/gallery"
-              className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
+              className="text-text hover:text-secondary transition-colors font-medium"
             >
               GALLERY
-            </a>
-            <a
-              href="/apply"
-              className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
-            >
-              APPLY
-            </a>
-            <a
+            </Link>
+            <Link
               href="/blog"
-              className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
+              className="text-text hover:text-secondary transition-colors font-medium"
             >
               Blogs
-            </a>
-            <a
-              href="/recruit"
-              className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
-            >
-              RECRUIT
-            </a>
+            </Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -84,49 +70,49 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t">
             <div className="flex flex-col space-y-4">
-              <a
+              <Link
                 href="/"
-                className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
+                className="text-text hover:text-secondary transition-colors font-medium"
               >
                 HOME
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/about"
-                className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
+                className="text-text hover:text-secondary transition-colors font-medium"
               >
                 ABOUT
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/services"
-                className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
+                className="text-text hover:text-secondary transition-colors font-medium"
               >
                 SERVICES
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/gallery"
-                className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
+                className="text-text hover:text-secondary transition-colors font-medium"
               >
                 GALLERY
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/apply"
-                className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
+                className="text-text hover:text-secondary transition-colors font-medium"
               >
                 APPLY
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/recruit"
-                className="text-[var(--body-color)] hover:text-secondary transition-colors font-medium"
+                className="text-text hover:text-secondary transition-colors font-medium"
               >
                 RECENT
-              </a>
+              </Link>
               <button className="bg-secondary hover:bg-secondary-light text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200 w-fit">
                 Get Quote
               </button>
             </div>
           </div>
         )}
-      </div>
+      </MotionDiv>
     </nav>
   );
 };

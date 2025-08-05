@@ -4,7 +4,7 @@ import React from 'react'
 const CareerSection = () => {
   return (
       <section className="py-20 bg-gray-900/10 text-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <div className="_container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Image */}
             <div className="order-2 lg:order-1">

@@ -2,7 +2,7 @@ import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from 'luc
 import React from 'react';
 
 const Footer = () => <footer className="bg-primary text-white py-10">
-<div className="max-w-7xl mx-auto px-4 md:px-8">
+<div className="_container">
   <div className="grid md:grid-cols-4 gap-8">
     {/* Company Info */}
     <div>
@@ -75,7 +75,7 @@ const Footer = () => <footer className="bg-primary text-white py-10">
         <input
           type="email"
           placeholder="Enter your email"
-          className="flex-1 px-4 py-2 rounded-l-lg text-[var(--body-color)] focus:outline-none focus:ring-2 focus:ring-secondary"
+          className="flex-1 px-4 py-2 rounded-l-lg text-text focus:outline-none focus:ring-2 focus:ring-secondary"
         />
         <button className="bg-secondary hover:bg-secondary-light px-4 py-2 rounded-r-lg transition-colors">
           Subscribe

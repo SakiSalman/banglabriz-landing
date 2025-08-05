@@ -8,9 +8,9 @@ const EventGallery = () => {
 
   return (
     <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <div className="_container">
           <div className="mb-12">
-            <p className="text-[var(--body-color)] mb-2">Our Activities</p>
+            <p className="text-text mb-2">Our Activities</p>
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
               Explore recent events
             </h2>
