@@ -131,20 +131,17 @@ const Header = () => {
                 GALLERY
               </Link>
               <Link
-                href="/apply"
+                href="/blog"
                 className="text-text hover:text-secondary transition-colors font-medium"
               >
-                APPLY
+                BLOG
               </Link>
               <Link
-                href="/recruit"
-                className="text-text hover:text-secondary transition-colors font-medium"
+                href={'/contact'}
+                className="bg-secondary hover:bg-secondary-light text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200 w-fit"
               >
-                RECENT
-              </Link>
-              <button className="bg-secondary hover:bg-secondary-light text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200 w-fit">
                 Get Quote
-              </button>
+              </Link>
             </div>
           </div>
         )}
