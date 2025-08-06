@@ -1,3 +1,4 @@
+import { MotionDiv } from '@/utils/motion.utils';
 import { Briefcase, CheckCircle, Clock, DollarSign, FileText, Globe, Users } from 'lucide-react';
 
 export interface ServiceCardProps {
@@ -40,7 +41,7 @@ const ServicesCard: React.FC<ServiceCardProps> = ({
   gradient,
 }) => {
   return (
-    <div className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-gray-200">
+    <MotionDiv className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-gray-200">
       {/* Header with Country Image */}
       <div className="relative h-48 overflow-hidden">
         <img
@@ -197,7 +198,7 @@ const ServicesCard: React.FC<ServiceCardProps> = ({
           </div>
         </div>
       </div>
-    </div>
+    </MotionDiv>
   );
 };
 

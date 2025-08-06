@@ -1,3 +1,4 @@
+import { MotionDiv } from '@/utils/motion.utils';
 import React from 'react';
 
 const StatisticsSection = () => {
@@ -11,20 +12,20 @@ const StatisticsSection = () => {
   return (
     <section className="bg-gray-light py-16">
       <div className="_container">
-        <div className="text-center mb-5">
+        <MotionDiv className="text-center mb-5">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Study. Travel. Live</h2>
           <p className="text-base text-text">
             BanglaBriz Career Development Centre & Education Consultancy
           </p>
-        </div>
+        </MotionDiv>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl md:text-6xl font-bold text-primary mb-2">
+              <MotionDiv className="text-4xl md:text-6xl font-bold text-primary mb-2">
                 {stat.number}
                 <span className="text-secondary">{stat.suffix}</span>
-              </div>
-              <div className="text-sm md:text-base text-text">{stat.label}</div>
+              </MotionDiv>
+              <MotionDiv className="text-sm md:text-base text-text">{stat.label}</MotionDiv>
             </div>
           ))}
         </div>

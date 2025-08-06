@@ -24,7 +24,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex gap-8 h-full items-center">
             <Link href="#" className="text-text hover:text-secondary transition-colors font-medium">
               HOME
             </Link>
@@ -34,11 +34,11 @@ const Header = () => {
             >
               ABOUT
             </Link>
-            <div className="relative group">
-              <button className="text-text hover:text-secondary transition-colors font-medium">
+            <div className="relative group inline-block">
+              <div className="text-text hover:text-secondary transition-colors font-medium cursor-pointer">
                 SERVICES
-              </button>
-              <div className="absolute left-0 mt-2 hidden group-hover:block bg-white border border-gray-100 rounded-lg shadow-lg w-48 z-50 top-2">
+              </div>
+              <div className="absolute left-0 top-full mt-2 bg-white border border-gray-100 rounded-lg shadow-lg w-48 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-3">
                 <Link
                   href="/student-services"
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -53,6 +53,7 @@ const Header = () => {
                 </Link>
               </div>
             </div>
+
             <Link
               href="/gallery"
               className="text-text hover:text-secondary transition-colors font-medium"
@@ -68,7 +69,10 @@ const Header = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Link href={'/contact'} className="bg-secondary hover:bg-secondary-light text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">
+            <Link
+              href={'/contact'}
+              className="bg-secondary hover:bg-secondary-light text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200 cursor-pointer"
+            >
               Get Quote
             </Link>
           </div>

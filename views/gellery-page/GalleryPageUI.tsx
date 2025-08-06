@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { ChevronDownIcon, MenuIcon, XIcon } from 'lucide-react';
 import React from 'react';
+import { MotionByIndex, MotionDiv } from '@/utils/motion.utils';
 
 const GalleryPageUI = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,7 +71,7 @@ const GalleryPageUI = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-500 via-blue-300 to-blue-400 text-white py-20">
-        <div className="_container text-center">
+        <MotionDiv className="_container text-center">
           <h1 className="text-4xl md:text-5xl font-semibold text-[#0a3255] mb-4 mt-10">Visa</h1>
           <p className="max-w-2xl mx-auto text-[#475467] text-base md:text-lg leading-relaxed">
             Celebrating the success of our clients! Here are a few of the many individuals who have
@@ -78,14 +79,15 @@ const GalleryPageUI = () => {
             to obtaining work permits, our dedicated team has helped numerous clients embark on
             their journeys abroad.
           </p>
-        </div>
+        </MotionDiv>
       </section>
 
       {/* Gallery Grid */}
       <section className="px-4 pb-16">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mt-12 max-w-7xl mx-auto">
-          {visaImages.map((visa) => (
-            <div
+          {visaImages.map((visa, index) => (
+            <MotionByIndex
+              i={index}
               key={visa.id}
               className="group transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-md"
             >
@@ -100,7 +102,7 @@ const GalleryPageUI = () => {
                 <p className="text-sm text-[#cac2c2] font-medium">{visa.client}</p>
                 <p className="text-xs text-[#475467]">{visa.country}</p>
               </div>
-            </div>
+            </MotionByIndex>
           ))}
         </div>
 

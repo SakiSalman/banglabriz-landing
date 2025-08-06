@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+import Link from 'next/link';
 import React from 'react';
 
 const Footer = () => <footer className="bg-primary text-white py-10">
@@ -23,24 +24,14 @@ const Footer = () => <footer className="bg-primary text-white py-10">
       <h4 className="text-lg font-semibold mb-4 text-secondary-light">Services</h4>
       <ul className="space-y-2 text-gray-light">
         <li>
-          <a href="#" className="hover:text-secondary-light transition-colors">
-            Career Guidance
-          </a>
+          <Link href="/student-services" className="hover:text-secondary-light transition-colors">
+            Student Services
+          </Link>
         </li>
         <li>
-          <a href="#" className="hover:text-secondary-light transition-colors">
-            Student Visa
-          </a>
-        </li>
-        <li>
-          <a href="#" className="hover:text-secondary-light transition-colors">
-            Work Permit
-          </a>
-        </li>
-        <li>
-          <a href="#" className="hover:text-secondary-light transition-colors">
-            Tours and Travels
-          </a>
+          <Link href="/worker-services" className="hover:text-secondary-light transition-colors">
+            Worker Services
+          </Link>
         </li>
       </ul>
     </div>

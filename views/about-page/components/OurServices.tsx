@@ -1,3 +1,4 @@
+import { MotionByIndex, MotionDiv } from '@/utils/motion.utils';
 import { CheckCircle, FileText, Globe, Plane, Shield, Users } from 'lucide-react';
 import React from 'react';
 
@@ -49,16 +50,16 @@ const OurServices = () => {
   return (
     <section className="py-20 bg-white">
       <div className="_container">
-        <div className="text-center mb-16">
+        <MotionDiv className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Comprehensive Services</h2>
           <p className="text-xl text-text max-w-3xl mx-auto">
             We provide end-to-end support for your international career and education journey.
           </p>
-        </div>
+        </MotionDiv>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="service-card group">
+            <MotionByIndex i={index} key={index} className="service-card group">
               <div
                 className={`w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
               >
@@ -66,7 +67,7 @@ const OurServices = () => {
               </div>
               <h3 className="text-xl font-bold mb-4">{service.title}</h3>
               <p className="text-text leading-relaxed">{service.description}</p>
-            </div>
+            </MotionByIndex>
           ))}
         </div>
       </div>

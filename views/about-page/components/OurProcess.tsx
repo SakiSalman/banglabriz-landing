@@ -1,3 +1,4 @@
+import { MotionByIndex, MotionDiv } from '@/utils/motion.utils';
 import { CheckCircle } from 'lucide-react';
 import React, { useState } from 'react';
 
@@ -62,17 +63,18 @@ const OurProcess = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="_container">
-        <div className="text-center mb-16">
+        <MotionDiv className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-secondary">Our Proven Process</h2>
           <p className="text-base md:text-lg text-text x-auto">
             We follow a systematic 6-step approach to ensure your success in achieving your career
             and education goals.
           </p>
-        </div>
+        </MotionDiv>
 
         <div className="grid lg:grid-cols-2 gap-8">
           {workSteps.map((step, index) => (
-            <div
+            <MotionByIndex
+              i={index}
               key={index}
               className={`service-card cursor-pointer transition-all duration-300 ${
                 activeStep === index ? 'ring-2 ring-secondary' : ''
@@ -101,7 +103,7 @@ const OurProcess = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </MotionByIndex>
           ))}
         </div>
       </div>

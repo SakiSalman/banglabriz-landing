@@ -1,5 +1,5 @@
 'use client';
-
+import * as motion from 'motion/react-client';
 import { useState } from 'react';
 import {
   Search,
@@ -33,7 +33,8 @@ const blogPosts: BlogPost[] = [
       'Celebrating the joyous occasion of Eid-ul-Fitr with our community and sharing the spirit of togetherness and gratitude.',
     date: 'April 29, 2024',
     author: 'Imam Monir',
-    image: '/placeholder.svg?height=300&width=400',
+    image:
+      'https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     category: 'Culture',
     readTime: '3 min read',
   },
@@ -45,7 +46,8 @@ const blogPosts: BlogPost[] = [
       'Honoring the contributions of workers worldwide and celebrating their dedication to building a better society.',
     date: 'May 1, 2024',
     author: 'Md Imam Hasan',
-    image: '/placeholder.svg?height=300&width=400',
+    image:
+      'https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     category: 'Social',
     readTime: '4 min read',
   },
@@ -56,7 +58,8 @@ const blogPosts: BlogPost[] = [
       'Elevate your brand with captivating designs! We are your go-to graphic design partner for all creative solutions.',
     date: 'May 10, 2024',
     author: 'Design Team',
-    image: '/placeholder.svg?height=300&width=400',
+    image:
+      'https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     category: 'Design',
     readTime: '5 min read',
   },
@@ -68,13 +71,15 @@ const blogPosts: BlogPost[] = [
       'Celebrating the unconditional love and sacrifices of mothers around the world on this special day.',
     date: 'May 15, 2024',
     author: 'Content Team',
-    image: '/placeholder.svg?height=300&width=400',
+    image:
+      'https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     category: 'Family',
     readTime: '2 min read',
   },
 ];
 
 import React from 'react';
+import { MotionByIndex, MotionDiv } from '@/utils/motion.utils';
 
 const BlogPageUI = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -96,14 +101,14 @@ const BlogPageUI = () => {
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-navy to-primary text-white py-16">
-        <div className="_container text-center">
+        <MotionDiv className="_container text-center">
           <h1 className="text-5xl font-bold mb-4 mt-10">
             BANGLABRIZ <span className="text-secondary">BLOG</span>
           </h1>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
             Turning Visions Into Reality - Insights, stories, and updates from our journey
           </p>
-        </div>
+        </MotionDiv>
       </section>
 
       {/* Main Content */}
@@ -113,7 +118,7 @@ const BlogPageUI = () => {
           <div className="lg:col-span-2">
             {/* Search and Filter */}
             <div className="mb-8 space-y-4">
-              <div className="relative">
+              <MotionDiv className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -122,11 +127,19 @@ const BlogPageUI = () => {
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                 />
-              </div>
+              </MotionDiv>
 
               <div className="flex flex-wrap gap-2">
-                {categories.map((category) => (
-                  <button
+                {categories.map((category, index) => (
+                  <motion.button
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                      type: 'spring',
+                      stiffness: 50, // Lower = softer movement
+                      damping: 20, // Higher = less bouncy
+                      delay: index * 0.001,
+                    }}
                     key={category}
                     onClick={() => setSelectedCategory(category)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
@@ -136,65 +149,64 @@ const BlogPageUI = () => {
                     }`}
                   >
                     {category}
-                  </button>
+                  </motion.button>
                 ))}
               </div>
             </div>
 
             {/* Blog Posts Grid */}
             <div className="space-y-8">
-              {filteredPosts.map((post) => (
-                <article
-                  key={post.id}
-                  className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden group"
-                >
-                  <div className="md:flex">
-                    <div className="md:w-1/3">
-                      <img
-                        src={post.image || '/placeholder.svg'}
-                        alt={post.title}
-                        className="w-full h-64 md:h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                    <div className="md:w-2/3 p-6">
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium">
-                          {post.category}
-                        </span>
-                        <span className="text-gray-400 text-xs">{post.readTime}</span>
+              {filteredPosts.map((post, index) => (
+                <MotionByIndex i={index} key={post.id}>
+                  <article className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden group">
+                    <div className="md:flex">
+                      <div className="md:w-1/3">
+                        <img
+                          src={post.image || '/placeholder.svg'}
+                          alt={post.title}
+                          className="w-full h-64 md:h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
                       </div>
-
-                      <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
-                        {post.title}
-                      </h2>
-
-                      {post.titleBengali && (
-                        <h3 className="text-lg font-semibold text-gray-700 mb-3">
-                          {post.titleBengali}
-                        </h3>
-                      )}
-
-                      <p className="text-body text-sm leading-relaxed mb-4 line-clamp-3">
-                        {post.excerpt}
-                      </p>
-
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center text-xs text-gray-400">
-                          <Calendar className="w-4 h-4 mr-1" />
-                          <span>{post.date}</span>
-                          <span className="mx-2">•</span>
-                          <User className="w-4 h-4 mr-1" />
-                          <span>{post.author}</span>
+                      <div className="md:w-2/3 p-6">
+                        <div className="flex items-center gap-2 mb-3">
+                          <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium">
+                            {post.category}
+                          </span>
+                          <span className="text-gray-400 text-xs">{post.readTime}</span>
                         </div>
 
-                        <button className="text-primary hover:text-navy font-medium text-sm flex items-center gap-1 group">
-                          Read More
-                          <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </button>
+                        <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                          {post.title}
+                        </h2>
+
+                        {post.titleBengali && (
+                          <h3 className="text-lg font-semibold text-gray-700 mb-3">
+                            {post.titleBengali}
+                          </h3>
+                        )}
+
+                        <p className="text-body text-sm leading-relaxed mb-4 line-clamp-3">
+                          {post.excerpt}
+                        </p>
+
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center text-xs text-gray-400">
+                            <Calendar className="w-4 h-4 mr-1" />
+                            <span>{post.date}</span>
+                            <span className="mx-2">•</span>
+                            <User className="w-4 h-4 mr-1" />
+                            <span>{post.author}</span>
+                          </div>
+
+                          <button className="text-primary hover:text-navy font-medium text-sm flex items-center gap-1 group">
+                            Read More
+                            <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </article>
+                  </article>
+                </MotionByIndex>
               ))}
             </div>
 

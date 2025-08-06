@@ -1,3 +1,4 @@
+import { MotionDiv } from '@/utils/motion.utils';
 import Image from 'next/image';
 import React from 'react';
 
@@ -18,27 +19,31 @@ const HeroBanner = () => {
 
       {/* Content */}
       <div className="relative z-10 md:max-w-7xl mx-auto px-4 md:px-8 text-center">
-        <div>
+        <MotionDiv>
           <button className="bg-secondary-light/10 border border-secondary px-10 py-1 rounded-full text-white">
             BanglaBriz
           </button>
-        </div>
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        </MotionDiv>
+        <MotionDiv>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
           Loyalty is our
           <span className="text-secondary-light">commitment</span>
         </h1>
-        <p className="text-lg !text-white mb-8 max-w-2xl mx-auto">
+        </MotionDiv>
+        <MotionDiv>
+          <p className="text-lg !text-white mb-8 max-w-2xl mx-auto">
           Building lasting relationships through dedicated career development and education
           consultancy services.
         </p>
-        <div className=" flex items-center justify-center gap-3">
+        </MotionDiv>
+        <MotionDiv className=" flex items-center justify-center gap-3">
           <button className="bg-secondary hover:bg-secondary-light text-white px-14 py-2.5 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg">
             Apply
           </button>
           <button className="bg-primary hover:bg-primary-light text-white px-8 py-2.5 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg">
             Get Quote →
           </button>
-        </div>
+        </MotionDiv>
       </div>
     </section>
   );

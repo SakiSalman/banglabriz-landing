@@ -1,3 +1,4 @@
+import { MotionDiv } from '@/utils/motion.utils'
 import { ArrowRight, CheckCircle, Globe } from 'lucide-react'
 import React from 'react'
 
@@ -8,7 +9,7 @@ const CareerSection = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Image */}
             <div className="order-2 lg:order-1">
-              <div className="relative">
+              <MotionDiv className="relative">
                 <img
                   src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800"
                   alt="Global career opportunities"
@@ -21,42 +22,48 @@ const CareerSection = () => {
                     <Globe className="w-12 h-12 text-white" />
                   </div>
                 </div>
-              </div>
+              </MotionDiv>
             </div>
 
             {/* Right Side - Content */}
             <div className="order-1 lg:order-2">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-secondary">
+              <MotionDiv>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-secondary">
                 Start your career
                 <br />
                 <span className="text-quaternary">anywhere in the world</span>
               </h2>
-              <p className="text-base text-gray-light leading-relaxed mb-8">
+              </MotionDiv>
+              <MotionDiv>
+                <p className="text-base text-gray-light leading-relaxed mb-8">
                 Our premier matching infrastructure and international partnerships enable us to
                 connect top global companies with workers based on their preferences. We provide
                 comprehensive support to help you achieve your career goals in any country you
                 choose.
               </p>
+              </MotionDiv>
               <div className="space-y-4 mb-8">
-                <div className="flex items-center">
+                <MotionDiv delay={.3} className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-quaternary mr-3" />
                   <span className="text-text">
                     Global network of partner companies
                   </span>
-                </div>
-                <div className="flex items-center">
+                </MotionDiv>
+                <MotionDiv delay={.5} className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-quaternary mr-3" />
                   <span className="text-text">Personalized career matching</span>
-                </div>
-                <div className="flex items-center">
+                </MotionDiv>
+                <MotionDiv delay={.9} className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-quaternary mr-3" />
                   <span className="text-text">End-to-end relocation support</span>
-                </div>
+                </MotionDiv>
               </div>
-              <button className="bg-secondary hover:bg-secondary-light text-white px-8 py-2.5 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center">
+              <MotionDiv>
+                <button className="bg-secondary hover:bg-secondary-light text-white px-8 py-2.5 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center">
                 Explore Opportunities
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
+              </MotionDiv>
             </div>
           </div>
         </div>

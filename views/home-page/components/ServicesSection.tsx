@@ -1,8 +1,8 @@
+import { MotionByIndex } from '@/utils/motion.utils';
 import { CheckCircle, FileText, Globe, Plane, Shield, Users } from 'lucide-react';
-import React from 'react'
+import React from 'react';
 
 const ServicesSection = () => {
-    
   const services = [
     {
       icon: Globe,
@@ -49,27 +49,26 @@ const ServicesSection = () => {
   ];
 
   return (
-         <section className="py-20 bg-gray-50">
-        <div className="_container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 group"
-              >
-                <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className={`w-8 h-8 ${service.color}`} />
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-text leading-relaxed">{service.description}</p>
+    <section className="py-20 bg-gray-50">
+      <div className="_container">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <MotionByIndex
+              i={index}
+              key={index}
+              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 group"
+            >
+              <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <service.icon className={`w-8 h-8 ${service.color}`} />
               </div>
-            ))}
-          </div>
+              <h3 className="text-xl font-bold text-primary mb-4">{service.title}</h3>
+              <p className="text-text leading-relaxed">{service.description}</p>
+            </MotionByIndex>
+          ))}
         </div>
-      </section>
-  )
-}
+      </div>
+    </section>
+  );
+};
 
-export default ServicesSection
+export default ServicesSection;

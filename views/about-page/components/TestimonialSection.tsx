@@ -1,3 +1,4 @@
+import { MotionDiv } from '@/utils/motion.utils'
 import { ArrowRight } from 'lucide-react'
 import React from 'react'
 
@@ -5,7 +6,7 @@ const TestimonialSection = () => {
   return (
         <section className="py-20 bg-gradient-to-r from-primary to-[var(--primary-color-light)] text-white">
           <div className="_container">
-            <div className="text-center">
+            <MotionDiv className="text-center">
               <blockquote className="text-2xl md:text-3xl font-light italic mb-8 max-w-4xl mx-auto">
                 "We specialize in connecting skilled workers with reputable companies, demonstrating our ability to adapt and respond to evolving needs."
               </blockquote>
@@ -15,7 +16,7 @@ const TestimonialSection = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
               </div>
-            </div>
+            </MotionDiv>
           </div>
         </section>
   )

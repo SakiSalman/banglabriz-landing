@@ -1,8 +1,6 @@
 import React from 'react';
 import ServiceBanner from '../services-page/components/ServiceBanner';
-import StudentServices from '../services-page/components/StudentServices';
 import CTASection from '../home-page/components/CTASection';
-import { Briefcase, CheckCircle, Clock, DollarSign, FileText, Globe, Users } from 'lucide-react';
 import ServicesCard, { ServiceCardProps } from '@/components/cards/ServicesCard';
 
 const StudentServicesPage = () => {
@@ -105,14 +103,6 @@ const StudentServicesPage = () => {
       <div className="bg-gradient-to-br from-gray-50 to-gray-100 mb-10">
         {/* Header */}
         <div className="_container">
-          <div className="text-center py-5">
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">Our Services</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We offer comprehensive support including application assistance for university and
-              college admissions, guidance on selecting or changing courses, and support for student
-              visas.
-            </p>
-          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
             {services.map((service, index) => (
               <ServicesCard key={index} {...service} />
