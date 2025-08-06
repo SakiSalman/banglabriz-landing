@@ -1,10 +1,6 @@
-import BlogDetailsPageUI from '@/views/blog-page/blog-details/BlogDetailsPageUI'
-import React from 'react'
+import BlogDetailsPageUI from '@/views/blog-page/blog-details/BlogDetailsPageUI';
+import React, { JSX } from 'react';
 
-const page = () => {
-  return (
-    <BlogDetailsPageUI/>
-  )
-}
+const page = (): JSX.Element => <BlogDetailsPageUI />;
 
-export default page
+export default page;

@@ -1,10 +1,6 @@
-import ContactPageUI from '@/views/page-contact/ContactPageUI'
-import React from 'react'
+import ContactPageUI from '@/views/page-contact/ContactPageUI';
+import React, { JSX } from 'react';
 
-const page = () => {
-  return (
-    <ContactPageUI/>
-  )
-}
+const page = (): JSX.Element => <ContactPageUI />;
 
-export default page
+export default page;

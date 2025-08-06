@@ -1,10 +1,6 @@
-import StudentServicesPage from '@/views/student-services/StudentServicesPage'
-import React from 'react'
+import StudentServicesPage from '@/views/student-services/StudentServicesPage';
+import React, { JSX } from 'react';
 
-const page = () => {
-  return (
-    <StudentServicesPage/>
-  )
-}
+const page = (): JSX.Element => <StudentServicesPage />;
 
-export default page
+export default page;

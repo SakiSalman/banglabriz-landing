@@ -1,10 +1,6 @@
-import WorkerServicesPage from '@/views/worker-services/WorkerServicesPage'
-import React from 'react'
+import WorkerServicesPage from '@/views/worker-services/WorkerServicesPage';
+import React, { JSX } from 'react';
 
-const page = () => {
-  return (
-    <WorkerServicesPage/>
-  )
-}
+const page = (): JSX.Element => <WorkerServicesPage />;
 
-export default page
+export default page;
