@@ -31,7 +31,7 @@ const HeroBanner = () => {
         </h1>
         </MotionDiv>
         <MotionDiv>
-          <p className="text-lg !text-white mb-8 max-w-2xl mx-auto">
+          <p className="text-lg !text-white mb-8 md:max-w-2xl mx-auto">
           Building lasting relationships through dedicated career development and education
           consultancy services.
         </p>
