@@ -62,15 +62,17 @@ const Footer = () => <footer className="bg-primary text-white py-10">
       <h4 className="text-lg font-semibold mb-4 text-secondary-light">
         Subscribe to our newsletter
       </h4>
-      <div className="flex mb-4 bg-gray-light rounded-md">
+      <div className='max-w-full'>
+        <div className="flex mb-4 bg-gray-light rounded-md">
         <input
           type="email"
           placeholder="Enter your email"
-          className="flex-1 px-4 py-2 rounded-l-lg text-text focus:outline-none focus:ring-2 focus:ring-secondary"
+          className="flex-1 px-4 py-2 rounded-l-lg text-text focus:outline-none focus:ring-2 focus:ring-secondary max-sm:w-[200px]"
         />
         <button className="bg-secondary hover:bg-secondary-light px-4 py-2 rounded-r-lg transition-colors">
           Subscribe
         </button>
+      </div>
       </div>
       <p className="!text-gray-light text-sm">
         Subscribe to our newsletter to get the latest news and updates.
