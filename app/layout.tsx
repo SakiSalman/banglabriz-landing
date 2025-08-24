@@ -1,8 +1,6 @@
 import { JSX } from 'react';
 import './globals.css';
 import type { Metadata } from 'next';
-import Header from '@/views/Header/Header';
-import Footer from '@/views/Footer/Footer';
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 export const metadata: Metadata = {
@@ -18,9 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased" suppressHydrationWarning>
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );
