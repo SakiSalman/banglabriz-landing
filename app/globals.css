@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import 'tailwindcss';
 :root {
-  --primary-color: #0a3255;
-  --primary-color-light: #045399;
-  --secondary-color: #cb445b;
-  --secondary-color-light: #f94766;
-  --body-color: #000000;
-  --quaternary-color: #1c8806;
-  --gray-color: #fffde9;
+  --primary-color: #c62827;
+  --secondary-color: #101828;
+  --secondary-color-light: #8b0836;
+  --body-color: #4a5565;
 }
 
 body {
@@ -19,17 +16,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 @theme {
   --color-primary: var(--primary-color);
   --color-secondary: var(--secondary-color);
   --color-primary-light: var(--primary-color-light);
   --color-secondary-light: var(--secondary-color-light);
-  --color-tertiary: var(--tertiary-color);
-  --color-quaternary: var(--quaternary-color);
   --color-text: var(--body-color);
-  --color-gray-light: var(--gray-color);
   --font-inter: 'Inter', sans-serif;
 }
 
@@ -40,22 +34,6 @@ h6 {
 
   .btn-secondary {
     @apply border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-medium transition-all duration-200;
-  }
-
-  .phase-tag {
-    @apply bg-[var(--primary-color-light)] text-white px-3 py-1 rounded-full text-sm font-medium;
-  }
-
-  .step-number {
-    @apply w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-lg;
-  }
-
-  .service-card {
-    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-100;
-  }
-
-  .stat-card {
-    @apply text-center p-6 bg-white rounded-lg shadow-md;
   }
 }
 p {
