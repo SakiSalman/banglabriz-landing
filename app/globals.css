@@ -4,6 +4,7 @@
   --primary-color: #c62827;
   --secondary-color: #101828;
   --secondary-color-light: #8b0836;
+  --gray-light: #E5E7EB;
   --body-color: #4a5565;
 }
 
@@ -24,6 +25,7 @@ h6 {
   --color-primary-light: var(--primary-color-light);
   --color-secondary-light: var(--secondary-color-light);
   --color-text: var(--body-color);
+  --color-gray-light: var(--gray-light);
   --font-inter: 'Inter', sans-serif;
 }
 
@@ -72,7 +74,7 @@ input[type='time']::-webkit-clear-button {
 }
 
 ._container {
-  max-width: 1400px !important;
+  max-width: 1250px !important;
   padding: 0 10px;
   margin: auto;
 }
@@ -84,15 +86,25 @@ input[type='time']::-webkit-clear-button {
     margin: auto;
   }
 }
-@keyframes slideOverlay {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
+
+.hover-active-bar::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary-color);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease-in-out;
+  border-radius: 5px;
+  transform: left center;
 }
 
-.animate-overlay-slide {
-  animation: slideOverlay 1s ease-out forwards;
+.hover-active-bar:hover::before {
+  transition: 0.5s ease-in-out;
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
 }
